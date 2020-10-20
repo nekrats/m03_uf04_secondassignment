@@ -5,11 +5,12 @@
  */
 package cat.copernic.m03_uf04_secondassignment;
 
+public abstract class Mobiles extends Dispositivos {
 
-public interface Conectable {
-    
-    void conecta();
-    
-    void desconecta();
-    
-}
+
+    public Mobiles(String nombre, String descripcion, double precio) {
+        super(nombre, descripcion, precio);
+
+    }
+    abstract void reset();
+} 

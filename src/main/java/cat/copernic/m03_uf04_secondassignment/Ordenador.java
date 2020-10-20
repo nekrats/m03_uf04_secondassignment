@@ -6,10 +6,12 @@
 package cat.copernic.m03_uf04_secondassignment;
 
 
-public interface Conectable {
+public class Ordenador extends Sobremesa {
     
-    void conecta();
-    
-    void desconecta();
+
+    public Ordenador(String nombre, String descripcion, int precio){
+        super(nombre, descripcion, precio);
+    }
+        
     
 }
