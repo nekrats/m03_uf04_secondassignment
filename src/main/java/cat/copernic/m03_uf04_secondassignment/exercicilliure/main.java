@@ -20,22 +20,33 @@ public class main {
             String respuesta = "    Precio total de la compra: ";
 
             System.out.println("Prueba de añadir el elemento de la array\n");
-            //mostramos el cesta de la compra mediante la asignacion de total ya que al llamar al checkout se activa el System.out.println
-            //además cogemos el valor de la suma del precio de los productos
-            precioTotal = cesta.checkout();
-            //mostramos lo que valen todos los productos juntos
-            System.out.println(respuesta+precioTotal+"\n");
             
-            System.out.println("Prueba de eliminar elemento de la array\n");
-            //eliminamos del cesta el articulo en la 2a posicion
-            cesta.elimina(articuloB);
-            //volvemos a mostrar tanto el carro con el 2o elemento eliminado como el valor total modificado
-            precioTotal= cesta.checkout();
-            System.out.println(respuesta+precioTotal+"\n");
-
-            cesta.elimina(articuloC);
-            cesta.afegir(articuloB);
-            precioTotal= cesta.checkout();
-            System.out.println(respuesta+precioTotal);
+            try {
+                //mostramos el cesta de la compra mediante la asignacion de total ya que al llamar al checkout se activa el System.out.println
+                //además cogemos el valor de la suma del precio de los productos
+                precioTotal = cesta.checkout();
+                //mostramos lo que valen todos los productos juntos
+                System.out.println(respuesta+precioTotal+"\n");
+                
+                System.out.println("Prueba de eliminar elemento de la array\n");
+                //eliminamos del cesta el articulo en la 2a posicion
+                cesta.elimina(articuloB);
+                //volvemos a mostrar tanto el carro con el 2o elemento eliminado como el valor total modificado
+                precioTotal= cesta.checkout();
+                System.out.println(respuesta+precioTotal+"\n");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+            try {
+                System.out.println("Prueba de eliminar elemento de la array y añadir otro\n");
+                cesta.elimina(articuloC);
+                cesta.afegir(articuloB);
+                precioTotal= cesta.checkout();
+                System.out.println(respuesta+precioTotal);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
     }
 }
